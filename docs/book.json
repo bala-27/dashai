@@ -1,0 +1,13 @@
+{
+    "title": "Sample Gitbook Application",
+    "plugins": [ 
+        "popup", "theme-darkblue"
+      ],
+    "links": {
+        "sidebar": {
+            "Contact us / Support": "https://www.gitbook.com/contact"
+        }
+    },
+    "pluginsConfig": {
+    }
+}		
