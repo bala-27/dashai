@@ -1,5 +1,6 @@
 {
     "title": "Sample Gitbook Application",
+    "root": "./docs",
     "plugins": [ 
         "popup", "theme-darkblue"
       ],
