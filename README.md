@@ -6,7 +6,6 @@
   <br>
   <a href="www.dashai.org"><img src="/docs/images/dashai.png" alt="dashai.org" width="500"></a>
   <br>
-  Arctiq's Production Website hosted on GH Pages with Jekyll`
   <br>
 </h2>
 
