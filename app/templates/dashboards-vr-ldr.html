@@ -3,13 +3,13 @@
 
       <!-- MAIN BODY STARTS HERE -->
      <!--  <div align="center" class="jumbotron jumbotron-fluid" id="here"> -->
-       <p></p>
-      <div align="center"  id="here">
+      
+      <div align="center"  id="here" style="background-color:black">
         <h1 align="center">Launching Dashboards</h1>
         <div id="content"><img align="center" src="/static/images/loader4.gif" /></div>
         <script>
             $(function () {
-                 $("#here").html('<iframe src="{{ dburi }}" height="2000" width="100%" frameborder="1"></iframe>');
+                 $("#here").html('<iframe src="{{ dburi }}" height="2000" width="100%" frameborder="0"></iframe>');
             }); </script>
       <!-- MAIN BODY ENDS HERE -->
 
