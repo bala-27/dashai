@@ -1,0 +1,66 @@
+          <h1>Deployed Operations Stack</h1>
+          <p class="lead"> We did stuff...</p>
+
+          <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Raw Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ul class="list-group">
+              <tr>
+                <th scope="row">Maria DB </th>
+                <td> <li class="list-group-item">
+                  {% for o1 in out1 %}
+                    <p>  {{ o1 }} </p>
+                  {% endfor %}
+                </li></td>
+                </tr>
+              <tr>
+                <th scope="row">Gearman Server</th>
+                <td> <li class="list-group-item">
+                  {% for o1 in out2 %}
+                    <p>  {{ o1 }} </p>
+                  {% endfor %}
+                </li></td>
+              </tr>
+              <tr>
+                <th scope="row">Gearman Worker</th>
+                <td> <li class="list-group-item">
+                  {% for o1 in out3 %}
+                    <p>  {{ o1 }} </p>
+                  {% endfor %}
+                </li></td>
+              </tr>
+              <tr>
+                <th scope="row">NagFlux</th>
+                <td> <li class="list-group-item">
+                  {% for o1 in out4 %}
+                    <p>  {{ o1 }} </p>
+                  {% endfor %}
+                </li></td>
+              </tr>
+              <tr>
+                <th scope="row">Nagios and Thruk UI</th>
+                <td> <li class="list-group-item">
+                  {% for o1 in out5 %}
+                    <p>  {{ o1 }} </p>
+                  {% endfor %}
+                </li></td>
+              </tr>
+              <tr>
+                <th scope="row">INFO</th>
+                <td> <li class="list-group-item">
+                    <p>  {{ out6 }} </p>
+                </li></td>
+              </tr>
+            </tbody>
+            </ul>
+
+          </table>
+
+
+          <tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>

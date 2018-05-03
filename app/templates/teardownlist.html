@@ -1,0 +1,34 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+
+     <hr class="mt-2">
+       <script>
+         $(function() {
+           $("#refresh").on("click", function() {
+              $("#podtable").html('<img align="center" src="/static/images/loader4.gif" />')
+              $("#podtable").load("/listdc")
+              return false;
+          })
+        })
+      </script>
+       <div class="card mb-3">
+         <div class="card-header">
+           <i class="fa fa-table"></i> Deployment Configs in Project  </div>
+             <div class="card-body" id="podtable" align="center">
+               <div id="podtable"><img align="center" src="/static/images/loader4.gif" /></div>
+               <script>
+                   $(function () {
+                     // Put an animated GIF image insight of content
+                        //$('#content').load('/static/images/loader2.gif')
+                        $("#podtable").load("/listdc");
+                   }); </script>
+             </div>
+           <div class="card-footer small text-muted"><button class="btn-primary btn-group-xs" id="refresh">Refresh</button></div>
+       </div>
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+</div>
+
+{% include 'footer.html' %}

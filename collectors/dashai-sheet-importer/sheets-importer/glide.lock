@@ -1,0 +1,51 @@
+hash: ff230e1c95f17ac1425fe001cb01b4e5a2747250b8433d22c603a57df5119290
+updated: 2017-07-24T09:15:12.015130807-04:00
+imports:
+- name: cloud.google.com/go
+  version: 76d607c4e7a2b9df49f1d1a58a3f3d2dd2614704
+  subpackages:
+  - compute/metadata
+- name: github.com/golang/protobuf
+  version: 0a4f71a498b7c4812f64969510bcb4eca251e33a
+  subpackages:
+  - proto
+- name: github.com/influxdata/influxdb
+  version: 5887e92e8950435ac7e496ff8dada784051284b7
+  subpackages:
+  - client/v2
+  - models
+  - pkg/escape
+- name: github.com/namsral/flag
+  version: 71ceffbeb0ba60fccc853971bb3ed4d7d90bfd04
+- name: golang.org/x/net
+  version: ab5485076ff3407ad2d02db054635913f017b0ed
+  subpackages:
+  - context
+  - context/ctxhttp
+- name: golang.org/x/oauth2
+  version: b53b38ad8a6435bd399ea76d0fa74f23149cca4e
+  subpackages:
+  - google
+  - internal
+  - jws
+  - jwt
+- name: google.golang.org/api
+  version: 295e4bb0ade057ae2cfb9876ab0b54635dbfcea4
+  subpackages:
+  - gensupport
+  - googleapi
+  - googleapi/internal/uritemplates
+  - sheets/v4
+- name: google.golang.org/appengine
+  version: ad2570cd3913654e00c5f0183b39d2f998e54046
+  subpackages:
+  - internal
+  - internal/app_identity
+  - internal/base
+  - internal/datastore
+  - internal/log
+  - internal/modules
+  - internal/remote_api
+  - internal/urlfetch
+  - urlfetch
+testImports: []

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card mx-auto mt-10">
+    <div class="card-header"><h1> Deployed Dashboards</h1></div>
+      <div class="card-body">
+        {% if "None" in dashboards %} 
+            "No Dashboards Appear To Be Deployed"
+        {% else %}       
+           {% if dashboards |length >= 1  %}
+          <form action="/launchdashboard" method="post">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ul class="list-group">
+                  {% for result in dashboards %}
+                  <tr>
+                    <td>{{ result[0] }}</td>
+                    <td><button class="btn btn-success btn-sm btn-block" name="dburi" type="submit" value="{{ result[1] }}">Launch</button></td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </ul>
+            </table>
+          </div>
+          <tr><a href="/"><button type="button" class="btn btn-primary btn-block" href="/">Return Home</button></a></tr>
+        </form>
+          {% else %}
+            "Not Found, Are You In The Right Project?"
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>

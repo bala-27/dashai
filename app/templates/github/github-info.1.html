@@ -1,0 +1,56 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">GitHub</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container">
+      <div class="card mx-auto mt-10">
+        <div class="card-header">GitHub Info</div>
+        <div class="card-body">
+          <form action = "/deploygithub_stg1" method = "POST">
+            <div class="form-group">
+                <label for="REPOS1">REPO 1 Sheet URL (required)</label>
+                <input name="REPOS1" type="text" class="form-control" id="REPOS1" placeholder="user1/repo1">
+              </div>
+              <div class="form-group">
+                <label for="REPOS2">REPO 2 Sheet URL (optional)</label>
+                <input name="REPOS2" type="text" class="form-control" id="REPOS2" placeholder="user2/repo2">
+              </div>
+              <div class="form-group">
+                <label for="REPOS3">REPO 3 Sheet URL (optional)</label>
+                <input name="REPOS3" type="text" class="form-control" id="REPOS3" placeholder="user3/repo3">
+              </div>
+              <div class="form-group">
+                <label for="REPOS4">REPO 4 Sheet URL (optional)</label>
+                <input name="REPOS4" type="text" class="form-control" id="REPOS4" placeholder="user4/repo4">
+              </div>
+              <div class="form-group">
+                <label for="REPOS5">REPO 5 Sheet URL (optional)</label>
+                <input name="REPOS5" type="text" class="form-control" id="REPOS5" placeholder="user5/repo5">
+              </div>
+              <div class="form-group">
+                <label for="authcode">GITHUB_TOKEN (optional)</label>
+                <input name="token" type="text" class="form-control" id="token" placeholder="API Token (optional)">                
+              </div>
+              <div class="form-group">
+                <label for="authcode">API_URL (optional)</label>
+                <input name="api" type="text" class="form-control" id="api" placeholder="Defaults to https://api.github.com">
+              </div>                          
+              <button type="submit" class="btn btn-primary">Submit</button>
+              {% if error %}
+              <div class="alert alert-danger">
+                  <strong>Required Fields Missing: </strong> {{ error }}
+              </div>
+              {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+{% include 'footer.html' %}

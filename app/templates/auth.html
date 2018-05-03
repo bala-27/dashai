@@ -1,0 +1,65 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Login</li>
+      </ol>
+      <!-- Icon Cards-->
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Example Bar Chart Card-->
+
+          <div class="container">
+          <div class="card mx-auto mt-8">
+            <div class="card-header">Status</div>
+            <div class="card-body">
+              {% with messages = get_flashed_messages() %}
+              {% if error %}
+              <div class="alert alert-danger">
+                  <strong>Error!</strong> {{ error }}
+              </div>
+              {% else %}
+                {% if messages %}
+                  <ul class=flashes>
+                     {% for message in messages %}
+                      <div class="alert alert-success">
+                      <strong align="center" >Success!</strong>
+                      <br><br>
+                      {{ message }}
+                      </div>
+                      <br>                    
+                       {% if defaultprojectwarn == "1" %} 
+                          <div class="alert alert-warning" role="alert">
+                          <strong align="center">Currently: {{ cmd }}</strong>
+                          <br>
+                          <p>You are currently in the "Default" Project. <a href="/projects" class="alert-link">Click Here</a> To Set/Create a new project</p>
+                        </div>
+                        {% else %} 
+                          <div class="alert alert-success">
+                          <strong align="center">Currently: {{ cmd }}</strong>
+                          </div>
+                        {% endif %}                   
+                      <br>
+                    </ul>
+                    {% endfor %}
+                {% endif %}
+              {% endif %}
+              {% endwith %}
+              <tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>
+            </div>
+          </div>
+        </div>
+
+
+          </div>
+
+         </div>
+      </div>
+      </div>
+
+
+  {% include 'footer.html' %}

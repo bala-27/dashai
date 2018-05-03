@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container-fluid">
+
+        <div class="card-header">Deploy Host Poller</div>
+        <div class="card-body">
+          <h3>
+            Host Metrics Poller
+            <br><br>
+            <small class="text-muted"> </small>
+          </h3>
+            <ul class="list-unstyled">
+          <li>The following operation will:
+              <ul>
+              <li>Generate an agent configuration</li>
+              <li>Package required commands into a shell script</li>
+              <li>You can then download and execute on the hosts</li>
+              <li>OR curl install it from DashAi </li>
+              </ul>
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="/telegraf-ldr" role="button">Deploy</a>
+        </div>
+
+    </div>
+
+
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+
+
+{% include 'footer.html' %}

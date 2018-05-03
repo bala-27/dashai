@@ -1,0 +1,135 @@
+{% include 'header.html' %}
+
+</script>
+
+    <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      {% if session['logged_in'] == False %}
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i>INFO</div>
+              <div class="jumbotron" style="background-image: url(./static/images/bg3.png);height: 100%x; width: 100%; border: 1px solid black;">
+                <h1 align="center">Welcome to </h1>
+                <div class="text-center">
+                  <img src="./static/images/dashai-logo-lrg.png" class="rounded" height="200"/>
+                </div>
+                <a href="login" > <p align="center" class="text-white">Login To Get Started</p> </a>
+            </div>
+          </div>
+       </div>
+
+      </div>
+      {% else %}
+      <!-- Area Chart Example-->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i>INFO</div>
+              <div class="jumbotron" style="background-image: url(./static/images/bg3.png);height: 100%x; width: 100%; border: 1px solid black;">
+                <div class="text-center">
+                  <img src="./static/images/dashai-logo-lrg.png" class="rounded" height="200"  />
+                </div>
+                <h1 align="center" class="text-white">Metric Collectors and Dashboard Analytics</h1>
+                <br /> <br />
+                <p align="center" class="text-white">Lets Deploy Some Collectors...</p>
+            </div>
+          </div>
+       </div>
+     </div>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card mb-3">
+              <div class="table-responsive-sm">
+                <table class="table table-bordered" id="Events" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th> <div class="card-header">
+                          <i class="fa fa-bar-chart"></i>Events</div>
+                      </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+              {% if events %}
+              {% for event in events %}
+              <tr><td>
+              <a class="list-group-item list-group-item-action" href="#">
+                <div class="media">
+                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                  <div class="media-body">
+                    <strong>{{event}}</strong>.
+                    <div class="text-muted smaller">Last Updated {{ time }}</div>
+                  </div>
+                </div>
+              </a>
+          </td></tr>
+            {% endfor %}
+            {% else %}
+            <tr><td>
+            <a class="list-group-item list-group-item-action" href="#">
+              <div class="media">
+                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                <div class="media-body">
+                  <strong>No events</strong>
+                </div>
+              </div>
+            </a>
+          <div class="card-footer small text-muted">Last Updated {{ time }}</div>
+        </td></tr>
+            {% endif %}
+          </tbody>
+        </table>
+          </div>
+       </div>
+     </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-3">
+              <div class="table-responsive-sm" align="center" id="statustable">
+                <script>
+                    $(function () {
+                      // Put an animated GIF image insight of content
+                         //$('#content').load('/static/images/loader2.gif')
+                         $("#statustable").load("/getstatusinfo");
+                    }); </script>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+      <hr class="mt-2">
+      <script>
+        $(function() {
+          $("#refresh").on("click", function() {
+             $("#podtable").html('<img align="center" src="/static/images/loader4.gif" />')
+             $("#podtable").load("/podtable")
+             return false;
+         })
+       })
+     </script>
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> PODs in Project  </div>
+            <div class="card-body" id="podtable" align="center">
+              <div id="podtable"><img align="center" src="/static/images/loader4.gif" /></div>
+              <script>
+                  $(function () {
+                    // Put an animated GIF image insight of content
+                       //$('#content').load('/static/images/loader2.gif')
+                       $("#podtable").load("/podtable");
+                  }); </script>
+            </div>
+          <div class="card-footer small text-muted"><button class="btn-primary btn-group-xs" id="refresh">Refresh</button>   <<< If I take too long, hit refresh</div>
+      </div>
+      {% endif %}
+{% include 'footer.html' %}

@@ -1,0 +1,53 @@
+          <h1>Deployed GitHub Integration</h1>
+          <p class="lead"> We did stuff...</p>
+
+          <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Raw Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ul class="list-group">
+              <tr>
+                <th scope="row">Prometheus</th>
+                <td>
+                <li class="list-group-item">
+                    {% for o1 in out1 %}
+                    <p>  {{ o1 }} </p>
+                    {% endfor %}
+                </li></td>
+                </tr>
+                <tr>
+                  <th scope="row">Pull Git Based Promethes ConfigMap (If Promethes TSBD is installed, Ignore)</th>
+                  <td> <li class="list-group-item">{{ out2 }}</li></td>
+                </tr>
+                <tr>
+                  <th scope="row">Deploy GitBased Prom ConfigMap (If Promethes TSBD is installed, Ignore)</th>
+                  <td> <li class="list-group-item">{{ out3 }}</li></td>
+                </tr>                                  
+                <tr>
+                  <th scope="row">Deploy GitHub Exporter</th>
+                  <td> <li class="list-group-item">{{ out4 }}</li></td>
+                </tr>     
+              <tr>
+                <th scope="row">Update ENV Vars</th>
+                <td> <li class="list-group-item">{{ out5 }}</li></td>
+              </tr>                      
+              <tr>
+                <th scope="row">Push Datasource</th>
+                <td> <li class="list-group-item">{{ out6 }}</li></td>
+              </tr>
+              <tr>
+                <th scope="row">Push Dashboard</th>
+                <td> <li class="list-group-item">{{ out7 }}</li></td>
+              </tr>
+            </tbody>
+            </ul>
+
+          </table>
+
+
+          <tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>

@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+
+      <div align="center" class="jumbotron jumbotron-fluid" id="here">
+        <h1 align="center">Launching Dashboards</h1>
+        <div id="content"><img align="center" src="/static/images/loader4.gif" /></div>
+        <script>
+            $(function () {
+                 $("#here").load("/getdashboards");
+            }); </script>
+        </div>
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+
+
+{% include 'footer.html' %}

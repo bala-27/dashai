@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+   <div class="container-fluid">
+          <!-- Example Bar Chart Card-->
+
+          <div class="container">
+          <div class="card mx-auto mt-8">
+            <div class="card-header">Status</div>
+            <div class="card-body">
+              {% if error == "LOST" %}
+              <div class="alert alert-danger">
+                  <p>Unable to connect via the Service Account or the Base Admin Account</p>
+                  <p>If this is a new installation please confirm the Grafana pod is up and running.</p>
+                  <p>If you have deleted the accounts by mistake or overwritten configuration,</p>
+                  <p>Please create an admin account with the following credentials in the Main Org as admin.</p>
+                  <p>admin / dashai</p>
+                  <p>Return the procedure that brough you here and an automatic fix will be attempted</p>                    
+                  <p>Once a service account is restored you can disable the above account</p>                    
+                </div>
+              </div>
+              {% elif error == "NOSVC" %}
+              <div class="alert alert-danger">
+                  <p>Unable to connect - POD is not responding</p>
+                  <p>If this is a new installation please confirm the Grafana pod is up and running.</p>
+                  <p>If the pod has failed, you can delete it via the Tear Down Collector option and redeploy.</p>                               
+                  <p>You can also investigate the pod via the OpenShift console.</p>                               
+                </div>
+              </div>              
+              {% else %}
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ error }}
+                 </div>
+              {% endif %}
+              <tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>
+            </div></div>
+
+{% include 'footer.html' %}

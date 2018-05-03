@@ -1,0 +1,59 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Login</li>
+      </ol>
+      <!-- Icon Cards-->
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Example Bar Chart Card-->
+
+          <div class="container">
+          <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+              <form action = "/auth" method = "POST">
+                <div class="form-group">
+                  <label for="ocpURL">OpenShift System URL</label>
+                  <input name="ocpURL" type="text" class="form-control" id="ocpURL" placeholder="console.myocpcluster.org:8443">
+                </div>
+                <div class="form-group">
+                  <label for="ocpUID">OpenShift Username</label>
+                  <input name="ocpUID" type="text" class="form-control" id="ocpUID" >
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <label for="ocpPID">OpenShift Password</label>
+                    <input name="ocpPID" type="password" class="form-control" id="ocpPID" >
+                  </div>
+                </div>
+                <div align="center"><strong> OR </strong></div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <label for="ocpTKN">OpenShift Token (paste string from OCP)</label>
+                    <input name="ocpTKN" type="text" class="form-control" id="ocpTKN" placeholder="oc login https://console.myocpcluster.org:8443 --token=xnk_....">
+                  </div>
+                </div>
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+          </div>
+
+         </div>
+      </div>
+      </div>
+
+
+  {% include 'footer.html' %}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>DashAi Bootstrap</title>
+  <!-- Bootstrap core CSS-->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="static/css/sb-admin.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready( function () {
+    var table = $('#Events').DataTable( {
+      pageLength : 5,
+      lengthMenu: [5],
+      "searching": false,
+      "ordering": false,
+      "lengthChange": false
+    } )
+  } );
+  </script>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!--<img class="mw-100" src="./static/images/arctiq-logo-white.png" height="50" width="150" />-->
+      <img class="mw-100" src="./static/images/dashai-logo-1.png" height="65" width="125"/>
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <br>
+          <a class="nav-link" href="/">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Home</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="/dashboards-ldr">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Dashboards</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Collectors">
+          <a class="nav-link" href="/collectors">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Collectors</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="DeployCore">
+          <a class="nav-link" href="core">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Deploy Base Components</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+          <a class="nav-link" href="projects">
+            <i class="fa fa-fw fa-list-alt"></i>
+            <span class="nav-link-text"> Set Project</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ADAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#ADAccordion" data-parent="#ADAccordion">
+            <i class="fa fa-fw fa-bullhorn"></i>
+            <span class="nav-link-text">Anomaly Detection</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="ADAccordion">
+            <li>
+              <a href="#">Coming Soon!</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="MLAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#MLAccordion" data-parent="#MLAccordion">
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Machine Learning</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="MLAccordion">
+            <li>
+              <a href="#">Coming Soon!</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Maintenance">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMaintenance" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Maintenance</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMaintenance">
+             <li>
+              <a  href="/teardownlist">Delete Collector</a>
+            </li>
+            <li>
+             <a href="fixgrafana">Repair Grafana</a>
+            </li>
+             </li>
+            </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Login">
+          {% if session['logged_in'] == False %}
+          <a class="nav-link" href="login">
+            <i class="fa fa-fw fa-sign-in"></i>
+            <span class="nav-link-text">Login</span>
+          </a>
+          {% else %}
+          <a class="nav-link" href="logout">
+            <i class="fa fa-fw fa-sign-out"></i>
+            <span class="nav-link-text">Logout</span>
+          </a>
+          {% endif %}
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <p class="text-white bg-dark">A Community Project By:</p><img class="mw-100" src="./static/images/arctiq-logo-1.png" height="65" width="125"/>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="content-wrapper">

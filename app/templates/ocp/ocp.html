@@ -1,0 +1,54 @@
+<h1>OCP Components Deployed</h1>
+<p class="lead"> We did stuff...</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Raw Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ul class="list-group">
+    <tr>
+      <th scope="row">Deploying Prometheus</th>
+      <td>
+        <li class="list-group-item">
+          {% for o1 in out1 %}
+          <p>  {{ o1 }} </p>
+          {% endfor %}
+        </li>
+        <li class="list-group-item">
+          {% for o2 in out2 %}
+          <p>  {{ o2 }} </p>
+          {% endfor %}
+        </li>
+    </tr>
+    <tr>
+      <th scope="row">Apply Config Map</th>
+      <td>
+        <li class="list-group-item">
+        {% for o3 in out3 %}
+        <p>  {{ o3 }} </p>
+        {% endfor %}
+        </li>
+        <li class="list-group-item">
+          {% for o4 in out4 %}
+          <p>  {{ o4 }} </p>
+          {% endfor %}
+        </li>
+    </td>
+    </tr>
+    <tr>
+      <th scope="row">Create Grafana DataSource</th>
+      <td>
+        <li class="list-group-item">{{ out5 }}</li>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Create Grafana Dashboard</th>
+      <td> <li class="list-group-item">{{ out6 }}</li></td>
+    </tr>
+  </tbody>
+  </ul>
+</table>
+<tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>

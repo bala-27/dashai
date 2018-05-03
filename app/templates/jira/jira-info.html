@@ -1,0 +1,42 @@
+
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">JIRA</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container">
+      <div class="card mx-auto mt-10">
+        <div class="card-header">JIRA Info</div>
+        <div class="card-body">
+          <form action = "/deployjira_stg1" method = "POST">
+              <div class="form-group">
+                <label for="jiraURL">JIRA System URL</label>
+                <input name="jiraURL" type="text" class="form-control" id="jiraURL" placeholder="jiraURL">
+              </div>
+              <div class="form-group">
+                <label for="jiraUID">JIRA Username</label>
+                <input name="jiraUID" type="text" class="form-control" id="jiraUID" placeholder="jiraUID">
+              </div>
+              <div class="form-group">
+              <label for="jiraPID">JIRA Password</label>
+              <input name="jiraPID" type="password" class="form-control" id="jiraPID" placeholder="jiraPID">
+            </div>
+            <div class="form-group">
+            <label for="jiraQRY">JIRA Query</label>
+            <!--<input name="jiraQRY" type="text" class="form-control" id="jiraQRY" placeholder="jiraQRY"> -->
+            <textarea class="form-control" rows="10"class="form-control" id="jiraQRY" placeholder="jiraQRY" ></textarea>
+            <a href=/jiraqueryexample target="_blank"> Click Here Query Example </a>
+           </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+{% include 'footer.html' %}

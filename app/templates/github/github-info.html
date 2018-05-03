@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">GitHub</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container">
+      <div class="card mx-auto mt-10">
+        <div class="card-header">GitHub Info</div>
+        <div class="card-body">
+          <form action = "/deploygithub_stg1" method = "POST">
+            <div class="form-group">
+                <label for="repos">REPO List (one required, additional comma seperated)</label>
+                <input name="repos" type="text" class="form-control" id="repos" placeholder="tensorflow/tensorflow, ansible/ansible, openshift/origin">
+              </div>
+              <div class="form-group">
+                <label for="authcode">GitHub Token (optional - allows more API queries)</label>
+                <input name="token" type="text" class="form-control" id="token" placeholder="API Token (optional)">                
+              </div>                     
+              <button type="submit" class="btn btn-primary">Submit</button>
+              {% if error %}
+              <div class="alert alert-danger">
+                  <strong>Required Fields Missing: </strong> {{ error }}
+              </div>
+              {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+{% include 'footer.html' %}

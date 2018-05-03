@@ -1,0 +1,49 @@
+{% include 'header.html' %}
+  <div class="container-fluid">
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Nagios</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container-fluid">
+
+        <div class="card-header">Deploy Nagios Ops Components</div>
+        <div class="card-body">
+          <h3>
+            Deploy Nagios Ops Monitoring Capabilites
+            <br><br>
+            <small class="text-muted"> </small>
+          </h3>
+            <ul class="list-unstyled">
+          <li>The following operation will:
+              <ul>
+              <li>Deploy Nagios Core</li>
+              <li>Deploy Gearman Server</li>
+              <li>Deploy Mod Gearman Worker</li>
+              <li>Deploy MariaDB</li>
+              <li>Deploy NagFlux</li>
+              <li>Deploy Apache & Thruk UI</li>
+              <li><p class="text-danger">ATTENTION: These Containers Run As Root (For Now)</p>
+                  <p class="text-danger"> We will attempt to set the SCC  [ "oc adm policy add-scc-to-user anyuid -z default" ]</p>
+                  <p class="text-danger"> IF this does not work, you need to ask your cluster admin to set this priviledge and then deploy this stack!</p>
+                </li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="/nagiosloader" role="button">Deploy</a>
+        </div>
+
+    </div>
+
+
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+
+
+{% include 'footer.html' %}

@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+  <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">OCP</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div align="center" class="jumbotron" id="here">
+        <h1 align="center">Deploying OCP Components</h1>
+        <p class="lead" align="center" > Please wait while we do stuff...</p>
+        <div id="content"><img align="center" src="/static/images/loader4.gif" /></div>
+        <script>
+            $(function () {
+                 $("#here").load("/ocp");
+            }); </script>
+        </div>
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+
+
+{% include 'footer.html' %}

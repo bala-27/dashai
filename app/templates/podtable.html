@@ -1,0 +1,29 @@
+<script>
+$(document).ready(function() {
+  $('#dataTable').DataTable();
+});
+</script>
+<div class="table-responsive">
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status </th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for result in podstatus %}
+      <tr>
+           <td>{{ result[0] }}</td>
+          {% if "Running" in result[1] %}
+            <td><span  class="btn btn-success btn-sm btn-block">{{ result[1] }}</span></td>
+          {% elif "Completed" in result[1]  %}
+              <td><span  class="btn btn-primary btn-sm btn-block">{{ result[1] }}</span></td>
+          {% else %}
+            <td><span class="btn btn-danger btn-sm btn-block">{{ result[1] }}</span></td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

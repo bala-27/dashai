@@ -1,0 +1,40 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+    prometheus.io/port: '9171'
+    prometheus.io/scrape: 'true'
+  labels:
+    app: dashai-github
+  name: dashai-github
+spec:
+  replicas: 1
+  selector:
+    app: dashai-github
+    deploymentconfig: dashai-github
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+        prometheus.io/port: '9171'
+        prometheus.io/scrape: 'true'
+      labels:
+        app: dashai-github
+        deploymentconfig: dashai-github
+    spec:
+      containers:
+      - image: dashai/github-exporter
+        imagePullPolicy: Always
+        name: github-exporter
+        ports:
+          - containerPort: 9171
+            protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

@@ -1,0 +1,47 @@
+          <h1>Done Building Host Integration</h1>
+          <p class="lead"> We did stuff...</p>
+
+          <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Raw Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ul class="list-group">
+              <tr>
+                <th scope="row">One Liner</th>
+                <td>
+                <li class="list-group-item">
+                  <p> sudo curl -s {{ rule }} | sh </p>
+                </li></td>
+              </tr>
+              <tr>
+                <th scope="row">Old School Cool</th>
+                <td>
+                <li class="list-group-item">
+                  <p> wget -O /tmp/dashai-host-poller.sh {{ rule }} </p>
+                  <p> chmod +x  /tmp/dashai-host-poller.sh </p>
+                  <p> sudo /tmp/dashai-host-poller.sh </p>
+                </li>
+              </td>
+              </tr>
+              <tr>
+                <th scope="row">Grafana Data Source and Dashboard Push</th>
+                <td>
+                {% for o1  in out %}
+                <li class="list-group-item">
+                  {{ o1 }}
+                </li>
+              {% endfor %}
+              </td>
+              </tr>
+            </tbody>
+            </ul>
+
+          </table>
+
+
+          <tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>

@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+
+    <div class="container-fluid">
+
+     <hr class="mt-2">
+       <script>
+         $(function() {
+           $("#refresh").on("click", function() {
+              $("#podtable").html('<img align="center" src="/static/images/loader4.gif" />')
+              $("#podtable").load("/listdc")
+              return false;
+          })
+        })
+      </script>
+       <div class="card mb-3">
+         <table class="table table-striped">
+           <thead>
+             <tr>
+               <th scope="col">Result:</th>
+             </tr>
+           </thead>
+           <tbody>
+            {% for p1 in projectschg %}
+             <tr>
+               <td><p> {{ p1 }}</p></td>
+               </tr>
+            {% endfor %}
+           </tbody>
+         </table>
+       </div>
+       <div align="center">
+       <a href="/"> <button type="submit" class="btn-primary btn-group-xl" href="/">Home</button></a>
+     </div>
+       </div>
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+</div>
+
+{% include 'footer.html' %}

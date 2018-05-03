@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container-fluid">
+
+        <div class="card-header">Deploy Apache Components</div>
+        <div class="card-body">
+          <h3>
+            This module will read Apache status information (mod_status)
+            <br><br>
+            <small class="text-muted"> </small>
+          </h3>
+            <ul class="list-unstyled">
+          <li>The following operation will:
+              <ul>
+              <li>Required: Your Apache URL</li>
+              <li>Required: Username</li>
+              <li>Required: Password</li>
+              </ul>
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="/apache-info" role="button">Deploy</a>
+        </div>
+
+    </div>
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+
+
+{% include 'footer.html' %}

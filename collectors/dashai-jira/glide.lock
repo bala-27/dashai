@@ -1,0 +1,13 @@
+hash: 6eec54e1453b22ce0a32ead61c42fec5818ed8cbded1f211b4d4e19813551f72
+updated: 2017-07-26T13:22:50.856746485-04:00
+imports:
+- name: github.com/influxdata/influxdb
+  version: 5887e92e8950435ac7e496ff8dada784051284b7
+  subpackages:
+  - models
+  - pkg/escape
+- name: github.com/influxdb/influxdb
+  version: 5887e92e8950435ac7e496ff8dada784051284b7
+  subpackages:
+  - client/v2
+testImports: []

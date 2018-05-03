@@ -1,0 +1,24 @@
+          <h1>Deployed Apache Integration</h1>
+          <p class="lead"> We did stuff...</p>
+
+          <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th>Raw Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ul class="list-group">
+             {% for o1 in output %}
+              <tr>
+                <td>{{ o1 }} </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+            </ul>
+
+          </table>
+
+
+          <tr><a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" href="/">Return Home</button></a></tr>

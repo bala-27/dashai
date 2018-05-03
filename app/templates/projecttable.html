@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+
+<script>
+$(document).ready(function() {
+  $('#dataTable').DataTable();
+});
+</script>
+<div class="table-responsive">
+
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for p1 in projects %}
+       <tr>
+         <div class="form-group">
+           <td><p class="text-dark">{{ p1 }}</p></td>
+           <td>
+             <form action = "/projectchg" method = "POST">
+             <button type="submit" class="btn btn-primary" name="{{ p1 }}">Switch To This Project</button>
+             <input type="hidden" name="project" value="{{ p1 }}">
+            </td>
+           </form>
+        </div>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <br /> <br />
+  <div align="center">
+    <form action = "/projectchg" method = "POST">
+    <input name="newproject" type="text" class="form-control" id="newproject" placeholder="Enter New Project Name Here. Example dashai">
+    <button type="submit" class="btn btn-success" name="newproject">Create New Project</button>
+    <input type="hidden" name="project" value="new">
+  </div>
+</div>
+{% include 'footer.html' %}

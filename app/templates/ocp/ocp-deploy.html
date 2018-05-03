@@ -1,0 +1,62 @@
+{% include 'header.html' %}
+  <div class="container-fluid">
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>
+      <!-- MAIN BODY STARTS HERE -->
+      <div class="container-fluid">
+
+        <div class="card-header">Deploy Core Components</div>
+        <div class="card-body">
+          <h3>
+            Deploy Openshift Monitoring Capabilites
+            <br><br>
+            <small class="text-muted"> </small>
+          </h3>
+            <ul class="list-unstyled">
+          <li>The following operation will:
+              <ul>
+              <li>Deploy Prometheus - Time Series Database</li>
+              <li>Deploy Grafana Dashboards - Graphic User Inferface </li>
+              <li>Set Cluster Read Permission [ if possible ] </li>
+              <li><p class="text-danger">ATTENTION: This Collector Is Intended For OCP Admininstrations As It Requires Cluster Read Permissiones </p>
+                  <p class="text-danger"> We will attempt to set the SCC  [ "oc adm policy add-cluster-role-to-user cluster-reader -z default" ]</p>
+                  <p class="text-danger"> If this does not work, you need to ask your cluster admin to set this priviledge and then deploy this stack!</p>
+              </li>
+              <br>
+              <form action = "/ocploader" method = "POST">
+                {% if version == "3.7" %}
+                      <button type="button" class="btn btn-success">OCP Version 3.7 Detected!</button>
+                      <input type="hidden" name="ocpver" value="3.7">
+                      <br><br><br>
+                      <button type="submit" class="btn btn-primary">Deploy</button>
+                {% elif version == "3.6" %}
+                      <button type="button" class="btn btn-success">OCP Version 3.6 or Lower Detected!</button>
+                      <input type="hidden" name="ocpver" value="3.6">
+                      <br><br><br>
+                      <button type="submit" class="btn btn-primary">Deploy</button>                      
+                {% else %}
+                      <br><br><br>
+                      <button type="button" class="btn btn-danger">Could Not Determing OCP Version</button>
+                {% endif %}
+            </form>
+            </ul>
+          </li>
+        </ul>
+        </div>
+
+    </div>
+
+
+
+      <!-- MAIN BODY ENDS HERE -->
+    </div>
+
+
+{% include 'footer.html' %}

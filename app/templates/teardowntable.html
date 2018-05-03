@@ -1,0 +1,33 @@
+<script>
+$(document).ready(function() {
+  $('#dataTable').DataTable();
+});
+</script>
+<div class="table-responsive">
+
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Delete </th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for d1 in dc %}
+       <tr>
+         <div class="form-group">
+           <td>{{ d1 }}</td>
+           <td>
+             <form action = "/teardownconfirm" method = "POST">
+             <button type="submit" class="btn btn-danger" name="{{ d1 }}">Delete</button>
+             <input type="hidden" name="dc" value="{{ d1 }}">
+            </td>
+           </form>
+        </div>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>

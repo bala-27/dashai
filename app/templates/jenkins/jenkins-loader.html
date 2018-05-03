@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+<div class="container-fluid">
+
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="#">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Jenkins</li>
+  </ol>
+  <!-- MAIN BODY STARTS HERE -->
+  <div align="center" class="jumbotron" id="here">
+    <h1>Deploying Jenkins with InfluxDB Plugin</h1>
+    <p class="lead"> Please wait while we do stuff ...</p>
+    <div id="content"><img src="/static/images/loader4.gif" /></div>
+      <script>
+          $(function () {
+               $("#here").load("/jenkins");
+          }); </script>
+                <!-- MAIN BODY ENDS HERE -->
+              </div>
+          </div>
+  {% include 'footer.html' %}
