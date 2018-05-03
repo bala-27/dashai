@@ -12,26 +12,25 @@ def deployocp():
       (cmd, err) = p.communicate()
       out1=prettyprint(cmd)
       #out1 = cmd
-      if ocpver == "3.7" :
+      if session['ocpversion'] == "3.7" :
           command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/ocp37.yml --config="+session['kubeconfig']
           p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
           (cmd, err) = p.communicate()
           out2=prettyprint(cmd)
-          id="4"
-      elif ocpver == "3.9" :
+          session['ocpid']="4"
+      elif session['ocpversion'] == "3.9" :
           command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/ocp37.yml --config="+session['kubeconfig']
           p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
           (cmd, err) = p.communicate()
           out2=prettyprint(cmd)
-          id="4"          
-      elif ocpver == "3.6" :
+          session['ocpid']="4"          
+      elif session['ocpversion'] == "3.6" :
           command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/ocp36.yml --config="+session['kubeconfig']
           p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
           (cmd, err) = p.communicate()
           out2=prettyprint(cmd)
-          id="2"
-
-      
+          session['ocpid']="2"
+      print ("ID:"+session['ocpid'])    
       command="oc volume dc/prometheus --add --overwrite --name=prom-k8s -m /etc/prometheus -t configmap --configmap-name=prom-k8s --config="+session['kubeconfig']
       p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
       (cmd, err) = p.communicate()
@@ -48,7 +47,7 @@ def deployocp():
       grafana = cmd.strip()
       url=("prometheus:9090")
       out5=deploy_DS_prom(url,grafana)
-      out6=deplpoy_dashboard(id,grafana)
+      out6=deplpoy_dashboard(session['ocpid'],grafana)
       eventgen("OCP Deployed")
       return render_template('ocp/ocp.html',
                              out1=out1,
@@ -74,10 +73,13 @@ def ocpdeploy():
     (cmd, err) = p.communicate()
     version=cmd
     if "3.7" in version:
-        version="3.7"  
+        session['ocpversion']="3.7" 
+        version="3.7" 
     elif "3.6" in version:
-        version="3.6"                 
+        session['ocpversion']="3.6"
+        version="3.6"                
     else:
+        session['ocpversion']="3.7"
         version="3.7"
-    print (version)
+    #print (version)
     return render_template('ocp/ocp-deploy.html',version=version)
