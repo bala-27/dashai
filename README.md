@@ -1,5 +1,15 @@
 # Dashai Deployment Documentation
 
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ArctiqTeam)
+
+<h2 align="center">
+  <br>
+  <a href="www.dashai.org"><img src="/docs/images/dashai.png" alt="dashai.org" width="500"></a>
+  <br>
+  Arctiq's Production Website hosted on GH Pages with Jekyll`
+  <br>
+</h2>
+
 * [Deploy OpenShift on Mac with docker & "oc cluster up"](https://github.com/ArctiqTeam/dashai-stable/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
 * [Deploy OpenShift on Windows10 with docker & "oc cluster up"](https://github.com/ArctiqTeam/dashai-stable/tree/master/docs/00_deploy_openshift_onwindows10_via_oc_cluster_up)
 * [Deploy OpenShift on Fedora 27 with docker & "oc cluster up"](https://github.com/ArctiqTeam/dashai-stable/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
