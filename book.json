@@ -1,14 +1,13 @@
 {
-    "title": "Sample Gitbook Application",
+    "title": "dashai ",
     "root": "./docs",
-    "plugins": [ 
-        "popup", "theme-darkblue"
-      ],
+    "plugins": ["fancybox"],
     "links": {
         "sidebar": {
-            "Contact us / Support": "https://www.gitbook.com/contact"
+            "dashai": "https://www.dashai.org"
         }
     },
     "pluginsConfig": {
+        "fancybox": {}
     }
-}		
+}	
