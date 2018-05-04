@@ -27,6 +27,8 @@
 
 * [Deploy OpenShift on Fedora 27 with docker & "oc cluster up"](https://github.com/ArctiqTeam/dashai-stable/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
 
+* [Deploy OpenShift on Fedora 27 with docker & "oc cluster up"](https://github.com/ArctiqTeam/dashai-stable/tree/master/docs/00_deploy_openshift_onfedora27_via_oc_cluster_up)
+
 * [Deploy OpenShift on Windows with docker & "oc cluster up"](https://github.com/ArctiqTeam/dashai-stable/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
 
 -----
