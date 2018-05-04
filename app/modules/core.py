@@ -37,7 +37,7 @@ def deploycore():
       out4=prettyprint(cmd)
       if err:
           eventgen("Error Caputred: "+err )
-      command="oc new-app https://github.com/dashai/dashai/tree/master/collectors/dashai-grafana-ocp--name grafana --config="+session['kubeconfig']
+      command="oc new-app https://github.com/dashai/dashai.git --context-dir=collectors/dashai-grafana-ocp --name=grafana --config="+session['kubeconfig']
       p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
       (cmd, err) = p.communicate()
       out5=prettyprint(cmd)
@@ -58,7 +58,7 @@ def deploycore():
       out8=prettyprint(cmd)
       if err:
           eventgen("Error Caputred: "+err )
-      command="oc new-app https://github.com/dashai/dashai/tree/master/collectors/dashai-influxdb --name dashai-influxdb --config="+session['kubeconfig']
+      command="oc new-app https://github.com/dashai/dashai.git --context-dir=collectors/dashai-influxdb --name=dashai-influxdb --config="+session['kubeconfig']
       p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
       (cmd, err) = p.communicate()
       out9=prettyprint(cmd)

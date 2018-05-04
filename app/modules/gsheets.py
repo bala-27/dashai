@@ -86,7 +86,7 @@ def deploysheets_stg2():
       global authcode
       client_token_path=get_client_token()
       private_token_path=get_private_token()
-      command = "oc new-app https://github.com/dashai/dashai/tree/master/collectors/dashai-sheet-importer --name dashai-sheets -e DOC_ID='"+docId+"' --config="+session['kubeconfig']
+      command = "oc new-app https://github.com/dashai/dashai.git --context-dir=collectors/dashai-sheet-importer --name=dashai-sheets -e DOC_ID='"+docId+"' --config="+session['kubeconfig']
       p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
       (cmd, err) = p.communicate()
       out1 = prettyprint(cmd)
