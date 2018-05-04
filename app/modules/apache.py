@@ -116,7 +116,7 @@ def deployapache_stg2():
     text_file.write(output_block)
     text_file.write(input_apache)
     text_file.close()
-    command="oc new-app https://github.com/alyarctiq/dashai-importer --name=dashai-apache  --config="+session['kubeconfig']
+    command="oc new-app https://github.com/dashai/dashai/tree/master/collectors/dashai-importer --name=dashai-apache  --config="+session['kubeconfig']
     p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
     (cmd, err) = p.communicate()
     out1=prettyprint(cmd)

@@ -6,6 +6,7 @@ from dashboards import grafanacreds
 def deploy_DS_influx(name,url,db,grafana):
         creds=grafanacreds(grafana)
         if "FAILED" in creds or "NOSVC" in creds:
+                error="NOSVC"
                 return render_template('grafanahealth.html', error=error) 
         elif "LOST" in creds:
                 error="LOST"
@@ -33,6 +34,7 @@ def deploy_DS_influx(name,url,db,grafana):
 def deploy_DS_prom(url,grafana):
         creds=grafanacreds(grafana)
         if "FAILED" in creds or "NOSVC" in creds:
+              error="NOSVC"
               return render_template('grafanahealth.html', error=error) 
         elif "LOST" in creds:
               error="LOST"      
@@ -41,7 +43,7 @@ def deploy_DS_prom(url,grafana):
                 print("Creating datasource")
                 src="""
                 {
-                "name":"DasahiPromK8S",
+                "name":"DashaiPromK8S",
                 "type":"prometheus",
                 "typeLogoUrl":"public/app/plugins/datasource/prometheus/img/prometheus_logo.svg",
                 "access":"proxy",

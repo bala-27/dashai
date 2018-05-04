@@ -42,7 +42,7 @@ def deploycore():
       (cmd, err) = p.communicate()
       out5=prettyprint(cmd)
       
-      command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/grafana-config.yml --config="+session['kubeconfig']
+      command="oc create -f https://raw.githubusercontent.com/dashai/dashai/master/configmaps/grafana-config.yml --config="+session['kubeconfig']
       p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
       (cmd, err) = p.communicate()
       out6=prettyprint(cmd)
