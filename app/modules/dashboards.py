@@ -13,43 +13,43 @@ def deplpoy_dashboard(id,grafana):
     else:    
         headers = {'Content-type': 'application/json', 'charset':'UTF-8'}
         if id == '1':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/gsheets.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/gsheets.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)
             return("Status:" + str(r.status_code))
         if id == '2':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/ocp36.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/ocp36.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)
             return("Status:" + str(r.status_code))
         if id == '3':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/dashai-nagios-linux.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/dashai-nagios-linux.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)
             return("Status:" + str(r.status_code))
         if id == '4':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/ocp37.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/ocp37.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)
             return("Status:" + str(r.status_code))
         if id == '5':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/dashai-apache.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/dashai-apache.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)
             return("Status:" + str(r.status_code))
         if id == '6':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/dashai-host-metrics.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/dashai-host-metrics.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)
             return("Status:" + str(r.status_code))
         if id == '7':
-            url = 'https://raw.githubusercontent.com/alyarctiq/dashboards/master/dashai-github.json'
+            url = 'https://raw.githubusercontent.com/dashai/dashai/master/dashboards/dashai-github.json'
             response = urllib.urlopen(url)
             data = response.read()
             r = requests.post("http://"+creds+"@"+grafana+"/api/dashboards/db", data, headers=headers)

@@ -13,19 +13,19 @@ def deployocp():
       out1=prettyprint(cmd)
       #out1 = cmd
       if session['ocpversion'] == "3.7" :
-          command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/ocp37.yml --config="+session['kubeconfig']
+          command="oc create -f https://raw.githubusercontent.com/dashai/dashai/master/configmaps/ocp37.yml --config="+session['kubeconfig']
           p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
           (cmd, err) = p.communicate()
           out2=prettyprint(cmd)
           session['ocpid']="4"
       elif session['ocpversion'] == "3.9" :
-          command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/ocp37.yml --config="+session['kubeconfig']
+          command="oc create -f https://raw.githubusercontent.com/dashai/dashai/master/configmaps/ocp37.yml --config="+session['kubeconfig']
           p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
           (cmd, err) = p.communicate()
           out2=prettyprint(cmd)
           session['ocpid']="4"          
       elif session['ocpversion'] == "3.6" :
-          command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/ocp36.yml --config="+session['kubeconfig']
+          command="oc create -f https://raw.githubusercontent.com/dashai/dashai/master/configmaps/ocp36.yml --config="+session['kubeconfig']
           p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
           (cmd, err) = p.communicate()
           out2=prettyprint(cmd)

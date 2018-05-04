@@ -51,7 +51,7 @@ def deploygithub_stg2():
         (cmd, err) = p.communicate()
         out1=prettyprint(cmd)
         
-        command="oc create -f https://raw.githubusercontent.com/alyarctiq/configmaps/master/githubexp.yml --config="+session['kubeconfig']
+        command="oc create -f https://raw.githubusercontent.com/dashai/dashai/master/configmaps/githubexp.yml --config="+session['kubeconfig']
         p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
         (cmd, err) = p.communicate()
         out2=prettyprint(cmd)
@@ -70,7 +70,7 @@ def deploygithub_stg2():
     if out3 == "":
         out3="Not Requried"
 
-    command = "oc create -f https://raw.githubusercontent.com/alyarctiq/dashai-github/master/dashai-github.yml --config="+session['kubeconfig']
+    command = "oc create -f https://raw.githubusercontent.com/dashai/dashai/master/collectors/dashai-github/dashai-github.yml --config="+session['kubeconfig']
     p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
     (cmd, err) = p.communicate()
     out4 = prettyprint(cmd)

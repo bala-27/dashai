@@ -31,7 +31,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -145,7 +145,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "editable": true,
           "error": false,
           "format": "percent",
@@ -225,7 +225,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -305,7 +305,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -387,7 +387,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -467,7 +467,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -547,7 +547,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -627,7 +627,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -707,7 +707,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -787,7 +787,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -875,7 +875,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 3,
           "editable": true,
           "error": false,
@@ -973,7 +973,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 3,
           "editable": true,
           "error": false,
@@ -1067,7 +1067,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 3,
           "editable": true,
           "error": false,
@@ -1183,7 +1183,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 3,
           "editable": true,
           "error": false,
@@ -1278,7 +1278,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -1375,7 +1375,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -1468,7 +1468,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -1579,7 +1579,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -1674,7 +1674,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -1780,7 +1780,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -1924,7 +1924,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "DasahiPromK8S",
+          "datasource": "DashaiPromK8S",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -2033,7 +2033,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "DasahiPromK8S",
+        "datasource": "DashaiPromK8S",
         "hide": 0,
         "includeAll": true,
         "label": null,
