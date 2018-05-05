@@ -1,4 +1,4 @@
-# Dashai Deployment Documentation
+# Dashai Deployment Documentation 
 
 * [Deploy OpenShift on Mac with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
 * [Deploy OpenShift on Windows10 with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onwindows10_via_oc_cluster_up)
