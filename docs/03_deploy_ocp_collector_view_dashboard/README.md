@@ -34,6 +34,18 @@ You can select also each node in your cluster to view specific node data
 
 ![](../images/Screenshot_2018-03-18_17.22.25.png)
 
-Ok - you have your OpenShift cluster being monitored with DashAI,
+Ok - you have your OpenShift cluster being monitored with dashai,
+
+You will want to move you Prometheus POD to utilize Persistent Storage
+This will ensure when your POD restarts you data will be maintained and available
+
+You can go ahead and provision some storage for your POD
+In our example we have Gluster configured in our Cluster
+
+![](../images/Screenshot 2018-05-04 23.33.19.png)
+
+Now let's update the deployment config's to attach our new storage
+
+    oc volume dc/prometheus --add --name=prom-k8s -m /etc/prometheus -t configmap --configmap-name=prom-k8s
 
 Feel free to customize your dashboard and play with the timeline...
