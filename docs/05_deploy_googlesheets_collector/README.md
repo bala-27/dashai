@@ -4,7 +4,7 @@ Let's first prepare our data file that will feed the dashai collector
 
 Download this example file and upload into into you google account
 
-[https://github.com/ArctiqTeam/dashai-stable/blob/master/Dashai_Sample_Sheet.xlsx](https://github.com/ArctiqTeam/dashai-stable/blob/master/Dashai_Sample_Sheet.xlsx)
+[https://github.com/dashai/dashai/blob/master/docs/Dashai%20Sample%20-%20Sheet.xlsx)
 
 ---
 

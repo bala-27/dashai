@@ -16,9 +16,7 @@ In this section we need you to provide the Github repo's you want to collect dat
 
 Below is an example a few different repo's you can use for testing:
 
-    ArctiqTeam/dashai-stable, openshift/origin, kubernetes/kubernetes, prometheus/prometheus, ansible/ansible, tensorflow/tensorflow
-
-ArctiqTeam/dashai-stable, openshift/origin, kubernetes/kubernetes, prometheus/prometheus, ansible/ansible, tensorflow/tensorflow
+    dashai/dashai, openshift/origin, kubernetes/kubernetes, prometheus/prometheus, ansible/ansible, tensorflow/tensorflow
 
 You can use your own, make sure to follow the formatting (no , after the last repo)
 
@@ -68,4 +66,4 @@ Go ahead and click on the "Dashboard" on the left side and "Launch" your Dashboa
 
 We have loaded some default graphs for you (feel free to customize)
 
-![](../images/Screenshot2018-04-2816.36.13.png)
+![](../images/Screenshot-2018-05-05-12.10.16.png)
