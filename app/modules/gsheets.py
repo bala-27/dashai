@@ -76,13 +76,14 @@ def deploysheets_stg1():
       result = request.form
       docID = request.form.get('docID')
       authcode = request.form.get('authcode')
-      docId=get_docID(docID)
+      session['docId']=get_docID(docID)
       getauthcode_stg2(authcode)
+
     return render_template('sheets/sheets-loader.html')
 
 @app.route('/deploysheets_stg2')
 def deploysheets_stg2():
-      global docId
+      docId=session['docId']
       global authcode
       client_token_path=get_client_token()
       private_token_path=get_private_token()
