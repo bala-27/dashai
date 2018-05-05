@@ -1,10 +1,23 @@
-# dashai Deployment Documentation
-
-+# dashai
+# dashai
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ArctiqTeam)
 
+ <h2 align="center">
+
 <br>
+<a href="www.dashai.org"><img src="/docs/images/dashai.png" alt="dashai.org" width="500"></a>
+<br>
+<br>
+
+
+<br>
+
+[![dashai](docs/images/dashai.png)](http://www.dashai.org)
+
+<br>
+
+<br>
+
 </h2>
 
 * [Deploy OpenShift on Mac with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
