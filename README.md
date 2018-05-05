@@ -1,4 +1,4 @@
-# dashai
+# Dashai Deployment and Configuration Documentation
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ArctiqTeam)
 
