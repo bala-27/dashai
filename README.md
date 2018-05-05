@@ -9,11 +9,6 @@
 <br>
 <br>
 
-
-<br>
-[![dashai](docs/images/dashai.png)](http://www.dashai.org)
-<br>
-<br>
 </h2>
 
 * [Deploy OpenShift on Mac with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
