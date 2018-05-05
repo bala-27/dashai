@@ -50,7 +50,7 @@ You can type oc project to validate what project you are in.
 
 Stable Release:
 
-    oc new-app https://github.com/ArctiqTeam/dashai-stable --name cfgtool;
+    oc new-app https://github.com/dashai/dashai --name cfgtool;
 
     oc expose svc/cfgtool
 
@@ -58,7 +58,7 @@ Stable Release:
 
 RnD Release: (Deploy @ your own risk!!!)
 
-    oc new-app https://github.com/alyarctiq/redoctober --name cfgtool;
+    TBD
 
     oc expose svc/cfgtool
 
