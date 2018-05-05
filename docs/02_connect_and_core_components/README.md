@@ -55,8 +55,11 @@ You can go ahead and provision some storage for your PODs
 In our example we have Gluster configured in our Cluster
 
 ![](../images/Screenshot 2018-05-04 23.18.44.png)
+
 ![](../images/Screenshot 2018-05-04 23.19.27.png)
+
 ![](../images/Screenshot 2018-05-04 23.20.38.png)
+
 ![](../images/Screenshot 2018-05-04 23.29.30.png)
 
 Now let's update the deployment config's to attach our new storage
