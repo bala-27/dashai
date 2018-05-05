@@ -57,7 +57,7 @@ func main() {
 	flag.StringVar(&user, "user", "", "InfluxDB User")
 	flag.StringVar(&password, "password", "", "InfluxDB Password")
 	flag.StringVar(&docId, "doc-id", "1NnmdNxhBKQe9veBoWjptDCG2ZOOrOXkNV6yqMYP4meI", "Google Sheet Documen ID")
-	flag.StringVar(&sheetName, "sheet", "Arctiq - Dashboard", "Google Sheet Name")
+	flag.StringVar(&sheetName, "sheet", "dashai", "Google Sheet Name")
 	flag.StringVar(&clientSecretFile, "client-secret-file", "client_secret.json", "JSON file containing the Client Secret")
 	flag.StringVar(&tokenFile, "token-file", "token.json", "JSON file to read/write the token")
 	flag.Parse()
