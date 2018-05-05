@@ -47,3 +47,20 @@ You should have a new grafana route also:
 ![](../images/Screenshot2018-04-2422.42.43.png)
 
 Your base components are now deployed...
+
+You will want to move you Influxdb and Grafana PODs to utilize Persistent Storage
+This will ensure when your POD restarts you data will be maintained and available
+
+You can go ahead and provision some storage for your PODs
+In our example we have Gluster configured in our Cluster
+
+![](../images/Screenshot 2018-05-04 23.18.44.png)
+![](../images/Screenshot 2018-05-04 23.19.27.png)
+![](../images/Screenshot 2018-05-04 23.20.38.png)
+![](../images/Screenshot 2018-05-04 23.29.30.png)
+
+Now let's update the deployment config's to attach our new storage
+
+    oc volume dc/dashai-influxdb --add --overwrite --name=dashai-influxdb-volume-1 --type=persistentVolumeClaim --claim-name=influxpv
+
+    oc volume dc/grafana --add --overwrite --name=grafana-var-lib --type=persistentVolumeClaim --claim-name=grafanapv --mount-path=/var/lib/grafana
