@@ -42,7 +42,7 @@ This will ensure when your POD restarts you data will be maintained and availabl
 You can go ahead and provision some storage for your POD
 In our example we have Gluster configured in our Cluster
 
-![](../images/Screenshot2018-05-04 23.33.19.png)
+![](../images/Screenshot2018-05-04-23.33.19.png)
 
 Now let's update the deployment config's to attach our new storage
 
