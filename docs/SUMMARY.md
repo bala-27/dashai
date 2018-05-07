@@ -1,6 +1,6 @@
 # Summary
 
-* [Deployment Examples for Development/Testing]()
+* [Deployment Examples for Dev/Test]()
 	* [oc cluster up]()
     	* [Fedora 27](00_deploy_openshift_onfedora27_via_oc_cluster_up/README.md)
         * [macOS](00_deploy_openshift_onmac_via_oc_cluster_up/README.md)
