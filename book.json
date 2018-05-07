@@ -4,13 +4,22 @@
     "styles":{
         "website": "./docs/styles/website.css"
     },
-    "plugins": ["fancybox"],
+    "plugins": ["fancybox", "links"],
     "links": {
         "sidebar": {
             "dashai": "https://www.dashai.org"
         }
     },
     "pluginsConfig": {
-        "fancybox": {}
+        "fancybox": {},
+        "links": { 
+            "links": [
+              {
+                  "label": "Read PDF",
+                  "icon": "fa fa-file-pdf-o",
+                  "url": "some-link-to-the-pdf"
+              }
+            ]
+          }
     }
 }	
