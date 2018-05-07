@@ -28,10 +28,8 @@ First thing we need to do is get Docker up and running and configured on Fedora
    In Fedora, you can create a new firewalld zone to enable this access:
    - Determine the Docker bridge network container subnet:
 
-      ```
-      docker network inspect -f '{{ range .IPAM.Config }}{{ .Subnet }}{{ end }}' bridge
-      ```
-      
+      ```docker network inspect -f '{{ range .IPAM.Config }}{{ .Subnet }}{{ end }}' bridge```
+
      You should get a subnet like: ```172.17.0.0/16```
 
    - Create a new firewalld zone for the subnet and grant it access to the API and DNS ports:
