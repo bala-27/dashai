@@ -9,5 +9,8 @@
     },
     "pluginsConfig": {
         "fancybox": {}
+    },
+    "styles":{
+        "website": "./docs/styles/website.css"
     }
 }	
