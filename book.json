@@ -1,6 +1,9 @@
 {
     "title": "dashai ",
     "root": "./docs",
+    "styles":{
+        "website": "./docs/styles/website.css"
+    },
     "plugins": ["fancybox"],
     "links": {
         "sidebar": {
@@ -9,8 +12,5 @@
     },
     "pluginsConfig": {
         "fancybox": {}
-    },
-    "styles":{
-        "website": "./docs/styles/website.css"
     }
 }	
