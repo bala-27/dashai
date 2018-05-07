@@ -27,9 +27,12 @@ First thing we need to do is get Docker up and running and configured on Fedora
 *  Ensure that your firewall allows containers access to the OpenShift master API (8443/tcp) and DNS (53/udp) endpoints.
    In Fedora, you can create a new firewalld zone to enable this access:
    - Determine the Docker bridge network container subnet:
+
+{% raw %}
 ```
 docker network inspect -f "{{ range .IPAM.Config }}{{ .Subnet }}{{ end }}" bridge
 ```
+{% endraw %}
 
      You should get a subnet like: ```172.17.0.0/16```
 
