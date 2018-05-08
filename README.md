@@ -5,7 +5,7 @@
 <h2 align="center">
 
 <br>
-<a href="www.dashai.org"><img src="/docs/images/dashai.png" alt="dashai.org" width="500"></a>
+[![dashai](docs/images/dashai.png)](http://www.dashai.org)
 <br>
 <br>
 
