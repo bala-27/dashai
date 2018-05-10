@@ -14,8 +14,10 @@
 
 </h2>
 
+* [dashai - A Community DevOps Dashboard - Blog and Demo]
+(https://https://www.arctiq.ca/our-blog/2018/5/7/dashai-a-community-devops-dashboard/)
+-----
 Already have an OpenShift cluster? You can skip to the Dashai deployment section
-
 * [Deploy OpenShift on Mac with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onmac_via_oc_cluster_up)
 * [Deploy OpenShift on Windows10 with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onwindows10_via_oc_cluster_up)
 * [Deploy OpenShift on Fedora 27 with docker & "oc cluster up"](https://github.com/dashai/dashai/tree/master/docs/00_deploy_openshift_onfedora27_via_oc_cluster_up)
