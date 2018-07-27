@@ -34,7 +34,12 @@ spec:
           image: 'docker.io/telegraf:1.7.2'
           imagePullPolicy: IfNotPresent
           name: telegraf
-          resources: {}
+          resources:
+            limits:
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
           securityContext:
             privileged: true
           terminationMessagePath: /dev/termination-log
