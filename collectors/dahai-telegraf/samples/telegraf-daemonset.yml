@@ -1,0 +1,94 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    component: telegraf
+  name: telegraf-agent
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      component: telegraf
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        component: telegraf
+    spec:
+      containers:
+        - env:
+            - name: HOSTNAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: spec.nodeName
+            - name: HOSTIP
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: status.hostIP
+            - name: HOST_PROC
+              value: /rootfs/proc
+            - name: HOST_SYS
+              value: /rootfs/sys
+          image: 'docker.io/telegraf:1.7.2'
+          imagePullPolicy: IfNotPresent
+          name: telegraf
+          resources: {}
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+            - mountPath: /var/run/utmp
+              name: varrunutmpro
+              readOnly: true
+            - mountPath: /rootfs/sys
+              name: sysro
+              readOnly: true
+            - mountPath: /rootfs/proc
+              name: procro
+              readOnly: true
+            - mountPath: /var/run/docker.sock
+              name: docker-socket
+            - mountPath: /rootfs
+              name: rootfs
+            - mountPath: /etc/telegraf
+              name: config
+            - mountPath: /dev
+              name: dev
+      dnsPolicy: ClusterFirst
+      hostNetwork: true
+      hostPID: true
+      nodeSelector:
+        telegraf-agent: 'true'
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - hostPath:
+            path: /dev
+          name: dev
+        - hostPath:
+            path: /sys
+          name: sysro
+        - hostPath:
+            path: /var/run/docker.sock
+          name: docker-socket
+        - hostPath:
+            path: /proc
+          name: procro
+        - hostPath:
+            path: /var/run/utmp
+          name: varrunutmpro
+        - hostPath:
+            path: /
+          name: rootfs
+        - configMap:
+            defaultMode: 420
+            name: telegraf
+          name: config
+  templateGeneration: 13
+  updateStrategy:
+    type: OnDelete
