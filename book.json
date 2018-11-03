@@ -1,25 +1,16 @@
 {
     "title": "dashai ",
     "root": "./docs",
-    "styles":{
-        "website": "./docs/styles/website.css"
-    },
-    "plugins": ["fancybox", "links"],
+    "plugins": ["fancybox"],
     "links": {
         "sidebar": {
             "dashai": "https://www.dashai.org"
         }
     },
     "pluginsConfig": {
-        "fancybox": {},
-        "links": { 
-            "links": [
-              {
-                  "label": "Read PDF",
-                  "icon": "fa fa-file-pdf-o",
-                  "url": "some-link-to-the-pdf"
-              }
-            ]
-          }
+        "fancybox": {}
+    },
+    "styles":{
+        "website": "./docs/styles/website.css"
     }
 }	
