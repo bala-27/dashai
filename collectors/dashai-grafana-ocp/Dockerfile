@@ -3,7 +3,7 @@ FROM centos:latest
 USER root
 EXPOSE 3000
 
-ENV GRAFANA_VERSION="4.3.1"
+ENV GRAFANA_VERSION="5.3.2"
 
 ADD root /
 RUN yum -y install https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-"$GRAFANA_VERSION"-1.x86_64.rpm \
